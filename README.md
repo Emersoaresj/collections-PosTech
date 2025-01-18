@@ -101,7 +101,7 @@ Esta documentação descreve como realizar testes manuais para validar os endpoi
 
 Para testar a API, importe a collection do Postman usando o link abaixo:
 
-[Link para a Collection do Postman]([https://github.com/usuario/repositorio/arquivo-collection.json](https://github.com/Emersoaresj/collections-PosTech/blob/main/Gerenciamento-Restaurantes.postman_collection.json))
+[Link para a Collection do Postman](https://github.com/usuario/repositorio/arquivo-collection.json](https://github.com/Emersoaresj/collections-PosTech/blob/main/Gerenciamento-Restaurantes.postman_collection.json)
 
 ## 3. Executando os Testes
 
