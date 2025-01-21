@@ -42,7 +42,7 @@ Esta documentação descreve como realizar testes manuais para validar os endpoi
        "email": "novoemail@exemplo.com",
        "login": "novousuario123",
        "endereco": "Rua Exemplo, 456",
-       "tipo": "DONO/USUARIO"
+       "tipo": "DONO/CLIENTE"
      }
      ```
   4. Clique em **Send**.
