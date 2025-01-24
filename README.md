@@ -83,7 +83,7 @@ Esta documentação descreve como realizar testes manuais para validar os endpoi
   3. Clique em **Send**.
   4. **Validação**:
      - Verifique se o status da resposta é `200 OK`.
-     - A resposta deve indicar que o login foi bem-sucedido. Caso contrário, o status pode ser `401 Unauthorized`.
+     - A resposta deve indicar que o login foi bem-sucedido. Caso contrário, lançará uma mensagem de login inválido.
 
 ### **5. Deletar Usuário (DELETE /{id})**
 
