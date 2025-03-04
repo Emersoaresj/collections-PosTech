@@ -19,7 +19,8 @@ Esta documentação descreve como realizar testes manuais para validar os endpoi
        "email": "usuario@exemplo.com",
        "login": "usuario123",
        "senha": "senha123",
-       "endereco": "Rua Exemplo, 123"
+       "endereco": "Rua Exemplo, 123",
+       "tipo": "DONO/CLIENTE"
      }
      ```
   4. Clique em **Send**.
@@ -76,10 +77,13 @@ Esta documentação descreve como realizar testes manuais para validar os endpoi
 
 - **Passos**:
   1. Selecione o método `POST` no Postman.
-  2. Insira a URL do endpoint com os parâmetros `login` e `senha` na query string:
-     ```
-     http://localhost:8080/validar-login?login=usuario123&senha=senha123
-     ```
+  2. No corpo da requisição, selecione o tipo `JSON` e insira `login` e `senha`:
+      ```json
+     {
+      "login": "emersoaress",
+      "senha": "senhaaa"
+      }
+      ```
   3. Clique em **Send**.
   4. **Validação**:
      - Verifique se o status da resposta é `200 OK`.
