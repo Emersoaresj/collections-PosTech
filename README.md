@@ -271,7 +271,7 @@ Esta documentação descreve como realizar testes manuais para validar os endpoi
          "mensagem": "Cardápio deletado com sucesso"
        }
        ```
---
+---
 
 ## 2. Link para a Collection do Postman
 
