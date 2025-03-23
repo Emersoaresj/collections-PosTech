@@ -2,155 +2,238 @@
 	"info": {
 		"_postman_id": "31b6a3fb-16f0-42ad-ad36-050109942b91",
 		"name": "RestauranTech",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "36357616"
 	},
 	"item": [
 		{
-			"name": "Create User",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"nome\": \"Emerson Soares Jeronimo\",\r\n  \"email\": \"emerson.jeronimo@example.com\",\r\n  \"login\": \"emersoaress\",\r\n  \"senha\": \"emer01\",\r\n  \"endereco\": \"Rua Exemplo, 123, São Paulo, SP\",\r\n  \"tipo\": \"DONO\"\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{url}}/usuarios/cadastrar",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"usuarios",
-						"cadastrar"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update User",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"nome\": \"Emerson Soares J\",\r\n  \"email\": \"emerson.jeronimo@example.com\",\r\n  \"login\": \"emersoaress\",\r\n  \"endereco\": \"Rua Exemplo, 123, São Paulo, SP\",\r\n  \"tipo\": \"DONO\"\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{url}}/usuarios/2",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"usuarios",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Change Password",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"senhaAntiga\": \"emer01\",\r\n    \"novaSenha\":\"senhaaa\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{url}}/usuarios/alterar-senha/1",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"usuarios",
-						"alterar-senha",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Valid Login",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"login\": \"emersoaress\",\r\n    \"senha\": \"senhaaa\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{url}}/usuarios/validar-login",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"usuarios",
-						"validar-login"
-					],
-					"query": [
-						{
-							"key": "login",
-							"value": "emersoaresj",
-							"disabled": true
+			"name": "Usuário",
+			"item": [
+				{
+					"name": "Create Usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Emerson S\",\r\n  \"email\": \"emersonsoares@email.com\",\r\n  \"login\": \"emersoares\",\r\n  \"senha\": \"senha123\",\r\n  \"endereco\": \"Rua das Flores, 123, São Paulo, SP\",\r\n  \"tipoUsuario\": {\r\n    \"nomeTipo\": \"Dono de Restaurante\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
-						{
-							"key": "senha",
-							"value": "senha123",
-							"disabled": true
+						"url": "{{url}}/usuarios/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Usuário",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Emerson Soares\",\r\n  \"email\": \"emersonsoares@gmail.com\",\r\n  \"login\": \"emersonsoares\",\r\n  \"endereco\": \"Rua das Flores, 123, São Paulo, SP\",\r\n  \"tipoUsuario\": {\r\n    \"nomeTipo\": \"Dono de restaurante\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/usuarios/113"
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senhaAntiga\": \"senha123\",\r\n    \"novaSenha\":\"emerson\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/usuarios/alterar-senha/113"
+					},
+					"response": []
+				},
+				{
+					"name": "Valid Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"emersonsoares\",\r\n    \"senha\": \"emerson\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/usuarios/validar-login"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Usuário",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/usuarios/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"usuarios",
+								"3"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								}
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/usuarios"
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Delete User",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "{{url}}/usuarios/1",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"usuarios",
-						"1"
-					],
-					"query": [
-						{
-							"key": null,
-							"value": "",
-							"disabled": true
-						}
-					]
+			"name": "Restaurante",
+			"item": [
+				{
+					"name": "Create Restaurante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeRestaurante\": \"Restaurante 01\",\r\n  \"enderecoRestaurante\": \"Rua das Flores, 123, São Paulo, SP\",\r\n  \"tipoCozinha\": \"Mexicano\",\r\n  \"horarioFuncionamento\": \"12:00 - 22:00\",\r\n  \"idDonoRestaurante\": 113\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/restaurantes/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Restaurante",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeRestaurante\": \"Restaurante Emerson\",\r\n  \"enderecoRestaurante\": \"Rua das Flores, 123, São Paulo, SP\",\r\n  \"tipoCozinha\": \"Brasileiro\",\r\n  \"horarioFuncionamento\": \"12:00 - 22:00\",\r\n  \"idDonoRestaurante\": 113\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/restaurantes/atualizar/33"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Restaurantes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/restaurantes"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Restaurante",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/restaurantes/deletar/1"
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "Cardápios",
+			"item": [
+				{
+					"name": "Create Cardápio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Pizza de Calabresa\",\r\n  \"descricao\": \"Pizza de calabresa com cebola\",\r\n  \"preco\": 49.90,\r\n  \"disponibilidadeConsumo\": \"LIVRE\",\r\n  \"caminhoImagem\": \"caminho aleatorio\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/cardapio/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cardápio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Pizza de Calabresa\",\r\n  \"descricao\": \"Pizza com calabresa, cebola e queijo mussarela\",\r\n  \"preco\": 45.90,\r\n  \"disponibilidadeConsumo\": \"LIVRE\",\r\n  \"caminhoImagem\": \"caminho aleatorio\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/cardapio/atualizar/39"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cardápios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/cardapio"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cardápio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/cardapio/deletar/1"
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
